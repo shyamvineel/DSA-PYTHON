@@ -81,9 +81,7 @@ class single_linked_list:
             self.head = new_node
             self.tail = new_node
         else:
-            while(temp.next!=None):
-                temp = temp.next
-            temp.next = new_node
+            self.tail.next = new_node
             self.tail = new_node
     '''
     delete_at_begining():   is a delete function which is used to delete the data from list "i.e" is at the begining.
@@ -143,13 +141,14 @@ class single_linked_list:
         if temp is not None :
             temp.data = data
 
-'''
+
 lst = single_linked_list()
 lst.insert_at_begining(12)
 lst.insert_at_begining(13)
 lst.insert_at_begining(14)
 lst.insert_at_index(1,3)
 lst.insert_at_end(100)
+lst.insert_at_end(150)
 
 lst.display()
 print("Head: ",lst.head.data)
@@ -166,7 +165,7 @@ print("Head: ",lst.head.data)
 print("Tail: ", lst.tail.data)
 print("Length: ", lst.Len())
 
-'''
+
 
             
 
