@@ -10,11 +10,11 @@ class double_linked_list:
         self.tail = None
 
     def Len(self):
-        count = 0
+        count = 1
         if self.head is None:
             return 0
         temp = self.head
-        while temp!=None:
+        while temp!=None and temp.next!=None:
             temp = temp.next
             count+=1
         return count

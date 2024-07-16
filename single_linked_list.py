@@ -13,11 +13,11 @@ class single_linked_list:
     syntax: obj.Len()
     '''
     def Len(self)-> int:
-        count = 0
+        count = 1
         temp = self.head
         if self.head == None:
             return 0
-        while temp!=None:
+        while temp!=None and temp.next!=None:
             temp = temp.next
             count+=1
         
