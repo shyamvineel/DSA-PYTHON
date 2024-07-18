@@ -142,29 +142,32 @@ class single_linked_list:
             temp.data = data
 
 
-lst = single_linked_list()
-lst.insert_at_begining(12)
-lst.insert_at_begining(13)
-lst.insert_at_begining(14)
-lst.insert_at_index(1,3)
-lst.insert_at_end(100)
-lst.insert_at_end(150)
 
-lst.display()
-print("Head: ",lst.head.data)
-print("Tail: ", lst.tail.data)
-print("Length: ", lst.Len())
-print("=======AFTER CHANGE========")
-lst.delete_at_first()
-lst.delete_at_end()
-lst.deleteIndex(3)
-lst.update(3,10)
-lst.update(5,15)
-lst.display()
-print("Head: ",lst.head.data)
-print("Tail: ", lst.tail.data)
-print("Length: ", lst.Len())
 
+if __name__ == "__main__":
+    lst = single_linked_list()
+
+    lst.insert_at_begining(12)
+    lst.insert_at_begining(13)
+    lst.insert_at_begining(14)
+    lst.insert_at_index(1,3)
+    lst.insert_at_end(100)
+    lst.insert_at_end(150)
+
+    lst.display()
+    print("Head: ",lst.head.data)
+    print("Tail: ", lst.tail.data)
+    print("Length: ", lst.Len())
+    print("=======AFTER CHANGE========")
+    lst.delete_at_first()
+    lst.delete_at_end()
+    lst.deleteIndex(3)
+    lst.update(3,10)
+    lst.update(5,15)
+    lst.display()
+    print("Head: ",lst.head.data)
+    print("Tail: ", lst.tail.data)
+    print("Length: ", lst.Len())
 
 
             
