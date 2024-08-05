@@ -94,19 +94,37 @@ class merge_sort:
 
 class quick_sort:
     def __init__(self) -> None:
-        
         pass
     def _sort(self, arr):
-        pass
+        n = len(arr)
+        self.quickSort(arr, 0, n-1)
+
+    def quickSort(self, arr, low, high):
+
+        if low < high:
+
+            pi = self.partition(arr, low, high)
+
+            self.quickSort(arr, low, pi-1)
+
+            self.quickSort(arr, pi, high)
+
+    def partition(self,arr, low, high):
+
+        pivot = arr[high]
+
+        i = low-1
+
+        for j in range(low, high):
+
+            if arr[j]<=pivot:
+
+                i+=1
+                (arr[i], arr[j]) = (arr[j], arr[i])
+        i+=1
+        (arr[i], arr[high]) = (arr[high], arr[i])
+
+        return i
+
+
         
-if __name__ == "__main__":
-    srt = bubble_sort()
-    srt1 = selection_sort()
-    srt2 = insertion_sort()
-    srt3 = merge_sort()
-    lst = [1,4,2,5,0]
-    print(lst)
-    srt3._sort(lst)
-    #srt1._sort(lst)
-    #srt._sort(lst)
-    print(lst)
